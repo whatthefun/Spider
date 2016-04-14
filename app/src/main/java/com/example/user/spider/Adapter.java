@@ -1,10 +1,8 @@
 package com.example.user.spider;
 
 import android.content.Context;
-import android.net.Uri;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,9 +58,8 @@ public class Adapter extends BaseAdapter{
 
         News news = (News) getItem(position);
 
-        holder.imageView.setImageURI(Uri.parse(news.getImage()));
+        holder.imageView.setImageBitmap(news.getImage());
         holder.txtTitle.setText(Html.fromHtml("<a href = " + news.getAddress() + "> " + news.getTitletext() + "</a>"));
-        Log.d("URL",news.getImage());
         holder.txtTime.setText(news.getTime());
         holder.txtSource.setText(news.getSource());
         return convertView;

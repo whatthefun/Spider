@@ -1,6 +1,7 @@
 package com.example.user.spider;
 
 import android.app.ListActivity;
+import android.graphics.Bitmap;
 
 /**
  * Created by USER on 2016/03/23.
@@ -9,10 +10,10 @@ public class News extends ListActivity{
     private String Title;
     private String Address;
     private String Time;
-    private String Image;
+    private Bitmap Image;
     private String Source;
 
-    public News(String image,String title, String address, String time, String source){
+    public News(Bitmap image,String title, String address, String time, String source){
         Title = title;
         Address = address;
         Time = time;
@@ -32,7 +33,7 @@ public class News extends ListActivity{
         return Time;
     }
 
-    public String getImage(){
+    public Bitmap getImage(){
         return Image;
     }
 

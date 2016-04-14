@@ -9,6 +9,7 @@
         android:layout_width="50sp"
         android:layout_height="50sp"
         android:scaleType="fitStart"
+        android:layout_marginRight="10dp"
         android:id="@+id/imgNews" />
 
     <LinearLayout
